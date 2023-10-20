@@ -2736,7 +2736,7 @@ input, select, textarea {
 		right: 0;
 		scrollbar-width: none; /* For Firefox */
 		overflow-y: auto;
-		font-size: 0.9em;
+		font-size: 1em;
 	}
 
 		#header h1, #header h2, #header h3, #header h4, #header h5, #header h6 {
@@ -3370,4 +3370,19 @@ input, select, textarea {
 	/* This is to provide a smooth transition effect to the paragraphs */
 	.collapse-transitioning {
 		transition: height 0.3s ease;
+	}
+
+	.port-paragraph {
+		text-align: left;
+		margin: 0 0 0 2em;
+		padding-bottom: 3em;
+	}
+
+	.port-img {
+		margin-left: 2em;
+
+	}
+
+	.port-head {
+		margin: 0 0 4em 0em;
 	}
