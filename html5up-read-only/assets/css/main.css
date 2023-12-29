@@ -159,6 +159,9 @@ input, select, textarea {
 	h4 {
 		font-size: 1.25em;
 		line-height: 1.5em;
+		padding-left: 0.5em;
+		padding-top: 0.5em;
+		padding-bottom: 0.25em;
 	}
 
 	h5 {
@@ -1784,16 +1787,17 @@ input, select, textarea {
 		line-height: 1.5em;
 	}
 
-	header.major h2 {
+	header.major h1 {
 		color: #4acaa8;
 		font-size: 3.5em;
 	}
 
-		header.major h2 + p {
+		header.major h1 + p {
 			color: #777;
 			font-size: 1.75em;
 			font-weight: 700;
 			margin-top: -0.75em;
+			padding: 8px 0 0 16px;
 		}
 
 /* Form */
@@ -2375,62 +2379,21 @@ input, select, textarea {
 
 .education-head {
 	text-align: right;
+		
 }
-
-.education-foot {
-	text-align: center;
-}
-
-.bullet-date {
-	font-weight: bold;
-	margin-right: 0.5em;
-  }
-  
-  .bullet-school {
-	font-weight: 500;
-	font-style: italic;
-	margin-right: 0.5em;
-  }
-  
-  .bullet-desc {
-	margin: 0;
-  }
 
 
   /* CV sections */
 
   .education-section {
-	text-align: left;
-	}
-
-	.work-section {
+	margin: 20px 0px 0px 0px;
 	text-align: left;
 	}
 
 	.special-section {
 	text-align: left;
+
 	}
-
-  /* Icons */
-
-  .icon-container i,
-  .icon-container h4 {
-	display: inline-block;
-	vertical-align: middle; 
-  }
-  
-  .icon-container i {
-	margin-right: 12px; /* add some space between the icon and text */
-	margin-bottom: 12px;
-	background: #4acaa8;
-	border-radius: 100%;
-	color: #ffffff;
-	height: 2.5em;
-	line-height: 2.5em;
-	width: 2.5em;
-	text-align: center;
-}
-
 
 /* Heading Icons */
 
@@ -2722,11 +2685,11 @@ input, select, textarea {
 		justify-content: space-between;
 		background: #4acaa8;
 		background-color: #1f1815;
-		background-attachment: scroll,								scroll;
-		background-image: url("images/overlay.png"), url("../../images/bg.jpg");
-		background-position: top right,							top right;
+		background-attachment: fixed,								scroll;
+		background-image: url("../../images/overlay7.png"), url("../../images/image1.jpg");
+		background-position: top right,							top center;
 		background-repeat: repeat,								no-repeat;
-		background-size: auto,								150%;
+		background-size: auto,								auto;
 		color: #d2f2e9;
 		height: 100%;
 		position: fixed;
@@ -2737,8 +2700,9 @@ input, select, textarea {
 		scrollbar-width: none; /* For Firefox */
 		overflow-y: auto;
 		font-size: 1em;
+		transition: background-image 1s ease-in-out; 
 	}
-
+	
 		#header h1, #header h2, #header h3, #header h4, #header h5, #header h6 {
 			color: #ffffff;
 		}
@@ -2843,6 +2807,7 @@ input, select, textarea {
 						border-top: 0;
 					}
 
+
 /* Wrapper */
 
 	#wrapper {
@@ -2858,7 +2823,7 @@ input, select, textarea {
 	}
 
 		#main > section > .container {
-			padding: 6em 0 4em 0;
+			padding: 4em 0 4em 0;
 		}
 
 		#main > section:first-child {
@@ -3182,11 +3147,11 @@ input, select, textarea {
 				display: none;
 			}
 
-			header.major h2 {
+			header.major h1 {
 				font-size: 2.5em;
 			}
 
-				header.major h2 + p {
+				header.major h1 + p {
 					font-size: 1.5em;
 				}
 
@@ -3346,15 +3311,19 @@ input, select, textarea {
 	}
 
 	/* Portfolio */
+	.imageWrapper:hover{
+	transform: translateY(2px);
+	}
 
 	.imageWrapper {
 		overflow: hidden;
-		height: 100px; /* adjust initial height as needed */
-		transition: height 0.3s ease;
+		height: 128px; /* adjust initial height as needed */
+		transition: height 0.7s ease;
+		border-radius: 5px;
 	}
 
 	.expanded {
-		height: 300px; /* adjust expanded height as needed */
+		height: 720px; /* adjust expanded height as needed */
 	}
 
 	.contentWrapper {
@@ -3389,4 +3358,185 @@ input, select, textarea {
 
 	ul .sublist {
 		list-style-type: circle;
+		padding-top: 0.25em;
 	  }
+
+	.section-separator {
+		margin: 1em 0; /* Creates space above and below the separator */
+		border-top: 2px solid #cccccc; /* Creates a line separator */
+	  }
+	  
+
+/* This CSS will go in your main.css file */
+#navPanelImage {
+transition: opacity 2s ease-in-out;
+height: 100%; /* Adjust as needed */
+width: auto;
+opacity: 0; /* Start with the image invisible */
+}
+/* This class will be added via JavaScript to fade in the image */
+.fade-in {
+opacity: 1;
+}
+
+#two {
+    background-color: #f4f4f4;
+    color: #333;
+    text-align: center;
+}
+
+.edu-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.edu {
+    background: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out;
+}
+
+.edu:hover {
+    transform: translateY(-5px);
+}
+
+.edu img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.edu-date {
+	font-weight: 600;
+	font-style: italic;
+	padding-top: 1px;
+	font-size: 1em;
+	text-align: center;
+  }
+  
+  .edu-school {
+	padding: 5px 8px 5px 8px;
+	font-weight: 400;
+	font-style: regular;
+	font-size: 1.2em;
+	text-align: center;
+  }
+  
+  .edu-desc {
+	padding:5px 20px 5px 20px;
+    font-size: 1em;
+    line-height: 1.5;
+	text-align: center;
+	font-weight: 200;
+  }
+
+.work-date {
+	font-weight: 600;
+	font-style: italic;
+	padding-top: 1px;
+	font-size: 1.2em;
+	text-align: center;
+	color: #777;
+  }
+  
+  .work-name {
+	padding: 5px 8px 5px 8px;
+	font-weight: 400;
+	font-style: regular;
+	font-size: 1.8em;
+	text-align: center;
+	color: #333;
+  }
+  
+  .work-desc {
+	padding:5px 20px 5px 20px;
+    font-size: 1.2em;
+    line-height: 1.5;
+	text-align: center;
+	font-weight: 300;
+  }
+
+
+  /* Work Experience Section */
+
+#work-experience {
+    text-align: center;
+    padding: 50px 0px;
+    margin: auto;
+}
+
+
+.work-grid {
+    display: grid;
+    grid-template-rows: repeat(auto-fit, minmax(200px, 2fr));
+    gap: 20px;
+    padding: 5px 10%;
+}
+
+.work-item {
+	padding: 0 3%;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+    position: relative;
+	
+}
+
+.work-item:hover {
+    transform: translateY(-10px);
+}
+
+.work-icon {
+    font-size: 3em;
+    color: #4acaa8; /* Icon color */
+    margin-bottom: 20px;
+}
+
+/* FontAwesome is required for icons */
+/* Make sure to include FontAwesome in your HTML or replace icons with images */
+
+#about-me {
+    text-align: center;
+    padding: 4em 0;
+    background-color: #f8f8f8;
+}
+
+.interest-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 8px;
+	padding: 0 5%;
+}
+
+.interest-item {
+    background: #ffffff;
+    padding: 1em;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
+}
+
+.interest-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.interest-item .icon {
+    font-size: 3em;
+    margin-bottom: 0.5em;
+    color: #4acaa8; /* Your theme color */
+}
+
+.interest-item h3 {
+    font-size: 1.5em;
+    margin-bottom: 0.5em;
+}
+
+.interest-item p {
+    color: #555;
+    line-height: 1.2;
+}
