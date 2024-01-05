@@ -193,7 +193,7 @@ input, select, textarea {
 	}
 
 		hr.major {
-			margin: 3.375em 0;
+			margin: 0.375em 0;
 		}
 
 	blockquote {
@@ -1790,6 +1790,7 @@ input, select, textarea {
 	header.major h1 {
 		color: #4acaa8;
 		font-size: 3.5em;
+		padding: 0 0 0 2em;
 	}
 
 		header.major h1 + p {
@@ -1797,7 +1798,7 @@ input, select, textarea {
 			font-size: 1.75em;
 			font-weight: 700;
 			margin-top: -0.75em;
-			padding: 8px 0 0 16px;
+			padding: 8px 0 0 2em;
 		}
 
 /* Form */
@@ -2695,7 +2696,7 @@ input, select, textarea {
 		position: fixed;
 		text-align: left;
 		top: 0;
-		width: 25em;
+		width: 30em;
 		right: 0;
 		scrollbar-width: none; /* For Firefox */
 		overflow-y: auto;
@@ -2812,7 +2813,7 @@ input, select, textarea {
 
 	#wrapper {
 		background: #fff;
-		padding-right: 23em;
+		padding-right: 30em;
 	}
 
 	
@@ -2823,7 +2824,7 @@ input, select, textarea {
 	}
 
 		#main > section > .container {
-			padding: 4em 0 4em 0;
+			padding: 4em 1em 4em 1em;
 		}
 
 		#main > section:first-child {
@@ -2878,7 +2879,7 @@ input, select, textarea {
 		/* Header */
 
 			#header {
-				width: 21em;
+				width: 25em;
 			}
 
 				#header > header {
@@ -2892,13 +2893,13 @@ input, select, textarea {
 		/* Wrapper */
 
 			#wrapper {
-				padding-right: 21em;
+				padding-right: 25em;
 			}
 
 		/* Main */
 
 			#main > section > .container {
-				padding: 4em 0 2em 0;
+				padding: 4em 1em 2em 1em;
 			}
 
 	}
@@ -3149,10 +3150,12 @@ input, select, textarea {
 
 			header.major h1 {
 				font-size: 2.5em;
+
 			}
 
 				header.major h1 + p {
 					font-size: 1.5em;
+					
 				}
 
 		/* Features */
@@ -3379,9 +3382,14 @@ opacity: 0; /* Start with the image invisible */
 opacity: 1;
 }
 
+#one {
+    padding: 4em 0 0 0;
+    
+}
+
 #two {
     background-color: #f4f4f4;
-    color: #333;
+    
     text-align: center;
 }
 
@@ -3464,7 +3472,7 @@ opacity: 1;
 
 #work-experience {
     text-align: center;
-    padding: 50px 0px;
+    padding: 4em 0 0 0;
     margin: auto;
 }
 
